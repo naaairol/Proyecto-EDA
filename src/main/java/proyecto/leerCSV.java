@@ -30,7 +30,7 @@ public class leerCSV {
                 int numeroPlataformasUsadas = Integer.parseInt(datos[5].trim());
                 String proposito = datos[6].trim();
                 float promedioSesion = Float.parseFloat(datos[7].trim());
-                float usoNoche = Float.parseFloat(datos[8].trim());
+                String usoNoche = (datos[8].trim());
                 String puntajeSaludMental = datos[9].trim(); 
                 String nivelAdiccion = datos[10].trim();
                 float tiempoPantallaAntesDormir = Float.parseFloat(datos[11].trim());

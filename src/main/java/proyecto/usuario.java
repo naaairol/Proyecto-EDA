@@ -10,12 +10,12 @@ public class usuario {
     private int numeroPlataformasUsadas;
     private String proposito;
     private float promedioSesion; //se encuentra en minutos
-    private float usoNoche; //se encuentra en horas
+    private boolean usoNoche; //boolean
     private int puntajeSaludMental;
     private String nivelAdiccion;
     private float tiempoPantallaAntesDormir; //se encuentra en minutos
 
-    public usuario(int edad, String genero, String country, float usoDiario, String plataformaPrimaria, int numeroPlataformasUsadas, String proposito, float promedioSesion, float usoNoche, String puntajeSaludMental, String nivelAdiccion, float tiempoPantallaAntesDormir) {
+    public usuario(int edad, String genero, String country, float usoDiario, String plataformaPrimaria, int numeroPlataformasUsadas, String proposito, float promedioSesion, String usoNoche, String puntajeSaludMental, String nivelAdiccion, float tiempoPantallaAntesDormir) {
         this.edad = edad;
         this.genero = genero;
         this.country = country;
@@ -24,7 +24,11 @@ public class usuario {
         this.numeroPlataformasUsadas = numeroPlataformasUsadas;
         this.proposito = proposito;
         this.promedioSesion = promedioSesion;
-        this.usoNoche = usoNoche;
+        if(usoNoche.equals("1")){
+            this.usoNoche=true;
+        } else {
+            this.usoNoche=false;
+        }
         this.nivelAdiccion = nivelAdiccion;
         this.tiempoPantallaAntesDormir = tiempoPantallaAntesDormir;
         //Para asignar el puntaje directamente desde el constructor
@@ -67,7 +71,7 @@ public class usuario {
         return promedioSesion;
     }
 
-    public float getUsoNoche() {
+    public boolean getUsoNoche() {
         return usoNoche;
     }
 
