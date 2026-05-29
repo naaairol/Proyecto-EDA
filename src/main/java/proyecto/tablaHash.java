@@ -5,7 +5,7 @@ public class tablaHash {
     
     public static int obtenerHash1(usuario u, int n){
         String llave = String.valueOf(u.getPromedioSesion());
-        int hash = 0; 
+        int hash = 2;
         int primo = 5; //uso de num primo
         
         for(int i=0; i<llave.length(); i++){
@@ -16,7 +16,7 @@ public class tablaHash {
     
     public static int obtenerHash2(usuario u, int n){
         String llave = String.valueOf(u.getPromedioSesion());
-        int hash = 0; 
+        int hash = 2; 
         int primo = 7; //uso de num primo
         
         for(int i=0; i<llave.length(); i++){
