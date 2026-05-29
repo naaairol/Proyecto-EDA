@@ -36,6 +36,13 @@ public class main {
             System.out.println(listaUsuarios.get(i));
         }
         
+        //Estadistica
+         System.out.println("\n--- ESTADISTICA USO NOCHE ---");
+        //Primera estadistica top 10 usuarios con alto uso nocturno
+        System.out.println("El siguiente top corresponde a los 10 usuarios que"
+                + " mas han utilizado redes sociales en la noche, medido en horas");
+        Estadisticas.topPromedioUsoNoche(listaUsuarios);
+        
         //Llamada a quick sort
         System.out.println("\n--- INICIO DE ORDENAMIENTO POR QUICK SORT ---");
         quickSort.ordenar(listaUsuarios, 0, listaUsuarios.size() - 1);
@@ -48,6 +55,17 @@ public class main {
         for(int i = 0; i < 100; i++){
          System.out.println(listaUsuarios.get(i));
         }
+        
+        //Estadistica
+          System.out.println("\n--- ESTADISTICAS ---");
+        System.out.println("--- ESTADISTICA PROMEDIO SESION ---");
+        //Segunda estadistica top 10 usuarios con el mayor promedio de uso por sesión
+        System.out.println("El siguiente top corresponde a los 10 usuarios que"
+                + " mas han utilizado redes sociales por sesion, medido en minutos");
+        Estadisticas.topPromedioSesion(listaUsuarios);
+        //Tercera estadística proporcion que usa redes sociales para fines informativos
+        System.out.println("\n--- PROPORCION DE USUARIOS, CASO ESPECIFICO ---");
+        Estadisticas.usuariosSegunProposito(usuarios);
         
         //Inicio del proceso Hashing
         System.out.println("\n--- INICIO DEL HASHING ---");
@@ -62,24 +80,5 @@ public class main {
             System.out.println(tablaHash[i].getPromedioSesion()+" "+ tablaHash[i].getGenero()+
             " " + tablaHash[i].getCountry());
         }
-        
-        //Estadísticas
-        System.out.println("\n--- ESTADISTICAS ---");
-        System.out.println("--- ESTADISTICA PROMEDIO SESION ---");
-        //Primera estadistica top 10 usuarios con el mayor promedio de uso por sesión
-        System.out.println("El siguiente top corresponde a los 10 usuarios que"
-                + " mas han utilizado redes sociales por sesion, medido en minutos");
-        Estadisticas.topPromedioSesion(listaUsuarios);
-        
-        System.out.println("\n--- ESTADISTICA USO NOCHE ---");
-        //Segunda estadistica top 10 usuarios con alto uso nocturno
-        System.out.println("El siguiente top corresponde a los 10 usuarios que"
-                + " mas han utilizado redes sociales en la noche, medido en horas");
-        Estadisticas.topPromedioUsoNoche(listaUsuarios);
-        
-        //Tercera estadística proporcion que usa redes sociales para fines informativos
-        System.out.println("\n--- PROPORCION DE USUARIOS, CASO ESPECIFICO ---");
-        Estadisticas.usuariosSegunProposito(usuarios);
-        
     }
 }
