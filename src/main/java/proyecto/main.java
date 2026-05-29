@@ -1,7 +1,6 @@
 package proyecto;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import static proyecto.leerCSV.obtenerUsuarios;
 import static proyecto.tablaHash.insertarUsuario;
 
@@ -24,9 +23,9 @@ public class main {
         for(int i=0; i<=10; i++){
             System.out.println(usuarios[i].toString());
         }   
-        
+       
         // Llamar al merge sort
-        MergeSort.mergeSort(listaUsuarios, 0, listaUsuarios.size() - 1);
+        MergeSort.mergeSort(listaUsuarios, 0, listaUsuarios.size()-1);
 
         // Mostrar despues de ordenar
         System.out.println("\nDESPUES DEL MERGE SORT:");
@@ -35,6 +34,9 @@ public class main {
             System.out.println(listaUsuarios.get(i));
         }
         
+        System.out.println("\n--- ESTADISTICA USO NOCHE ---");
+        //Segunda estadistica top 10 usuarios con alto uso nocturno
+        Estadisticas.topPromedioUsoNoche(listaUsuarios);
         
         // Llamar al QuickSort para ordenar por promedioSesion
         quickSort.ordenar(listaUsuarios, 0, listaUsuarios.size() - 1);
@@ -44,6 +46,9 @@ public class main {
         for(int i = 0; i < 100; i++){
          System.out.println(listaUsuarios.get(i));
         }
+          System.out.println("\n--- ESTADISTICA PROMEDIO SESION ---");
+        //Segunda estadistica top 10 usuarios 
+        Estadisticas.topPromedioSesion(listaUsuarios);
         
         System.out.println("----");
         //Hash

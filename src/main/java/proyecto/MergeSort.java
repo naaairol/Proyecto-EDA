@@ -36,7 +36,7 @@ public class MergeSort {
     // Mezclar
     while(i < tamanoIzquierda && j < tamanoDerecha){
 
-        if(izquierdaLista.get(i).getEdad() <= derechaLista.get(j).getEdad()){
+        if(izquierdaLista.get(i).getUsoNoche() <= derechaLista.get(j).getUsoNoche()){
 
             lista.set(k, izquierdaLista.get(i));
             i++;
