@@ -36,34 +36,33 @@ public class MergeSort {
     // Mezclar
     while(i < tamanoIzquierda && j < tamanoDerecha){
 
-        if(izquierdaLista.get(i).getUsoNoche() <= derechaLista.get(j).getUsoNoche()){
-
+        if(izquierdaLista.get(i).getTiempoPantallaAntesDormir()<= derechaLista.get(j).getTiempoPantallaAntesDormir()){
             lista.set(k, izquierdaLista.get(i));
             i++;
-
+            
         }else{
-
+            
             lista.set(k, derechaLista.get(j));
             j++;
         }
-
+        
         k++;
     }
-
+    
     // Copiar sobrantes izquierda
     while(i < tamanoIzquierda){
-
+        
         lista.set(k, izquierdaLista.get(i));
         i++;
         k++;
     }
-
+    
     // Copiar sobrantes derecha
     while(j < tamanoDerecha){
-
+        
         lista.set(k, derechaLista.get(j));
         j++;
         k++;
     }
-}
+  }
 }

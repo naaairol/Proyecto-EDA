@@ -37,11 +37,11 @@ public class main {
         }
         
         //Estadistica
-         System.out.println("\n--- ESTADISTICA USO NOCHE ---");
+         System.out.println("\n--- ESTADISTICA DEL TIEMPO DE USO EN LA NOCHE ---");
         //Primera estadistica top 10 usuarios con alto uso nocturno
         System.out.println("El siguiente top corresponde a los 10 usuarios que"
-                + " mas han utilizado redes sociales en la noche, medido en horas");
-        Estadisticas.topPromedioUsoNoche(listaUsuarios);
+                + " mas han utilizado redes sociales en la noche, medido en minutos");
+        Estadisticas.topTiempoAntesdeIrAdormir(listaUsuarios);
         
         //Llamada a quick sort
         System.out.println("\n--- INICIO DE ORDENAMIENTO POR QUICK SORT ---");
