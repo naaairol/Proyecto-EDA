@@ -1,7 +1,9 @@
 package proyecto;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import static proyecto.leerCSV.obtenerUsuarios;
+import static proyecto.tablaHash.insertarUsuario;
 
 
 public class main {
@@ -43,5 +45,15 @@ public class main {
          System.out.println(listaUsuarios.get(i));
         }
         
+        System.out.println("----");
+        //Hash
+        usuario[] tablaHash = new usuario[10357];
+        for(usuario u: usuarios){
+            insertarUsuario(u, tablaHash);
+        }
+        
+        for(int i=0; i<100; i++){
+            System.out.println(tablaHash[i].getPromedioSesion()+" "+ tablaHash[i].getGenero());
+        }
     }
 }
